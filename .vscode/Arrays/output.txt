@@ -1,0 +1,2 @@
+The Largest element in the array is: 5
+The Largest element in the array is: 10
