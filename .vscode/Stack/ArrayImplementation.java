@@ -1,7 +1,7 @@
 public class ArrayImplementation {
 
     public static class Stack {
-        private int[] arr = new int[10];
+        private int[] arr = new int[5];
         private int idx = 0;   
 
         void push(int x) {
@@ -41,6 +41,16 @@ public class ArrayImplementation {
         int size() {
             return idx;
         }
+
+        boolean isEmpty(){
+            if(idx == 0) return true;
+            return false;
+        }
+
+        boolean isFull(){
+            if(idx == arr.length) return true;
+            return false;
+        }
     }
 
     public static void main(String[] args) {
@@ -62,11 +72,22 @@ public class ArrayImplementation {
         st.push(1);
         st.display(); // 5 4 3 2 1
 
+        System.out.println(st.isFull());
+
         System.out.println(st.size()); // 5
         System.out.println(st.peek()); // 1
         System.out.println(st.pop());  // 1
 
         st.display(); // 5 4 3 2
         System.out.println(st.size()); // 4
+
+        System.out.println(st.pop());
+        System.out.println(st.isEmpty());
+        System.out.println(st.pop());
+        System.out.println(st.isEmpty());
+        System.out.println(st.pop());
+        System.out.println(st.isEmpty());
+        System.out.println(st.pop());
+        System.out.println(st.isEmpty());
     }
 }
