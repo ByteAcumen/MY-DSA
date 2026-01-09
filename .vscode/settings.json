@@ -1,0 +1,5 @@
+{
+    "editor.inlineSuggest.suppressSuggestions": false,
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+    "chat.extensionUnification.enabled": true
+}
