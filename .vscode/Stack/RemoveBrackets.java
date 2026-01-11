@@ -13,14 +13,13 @@ public class RemoveBrackets {
             } 
             else if (ch == ')') {
                 if (!stack.isEmpty() && stack.peek() == '(') {
-                    stack.pop(); // matched pair
+                    stack.pop(); 
                 } else {
-                    extraClosing++; // unmatched ')'
+                    extraClosing++;
                 }
             }
         }
 
-        // stack.size() = number of unmatched '('
         return stack.size() + extraClosing;
     }
 
