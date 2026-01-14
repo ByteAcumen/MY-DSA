@@ -9,7 +9,7 @@ public class RemoveConcutiveSubSequence {
                 st.push(arr[i]);
             }
             else if(st.peek() == arr[i]){
-                if(i == arr.length-1 || arr[i] != arr[i+1]){
+                if(arr[i] != arr[i+1]){
                     st.pop();
                 }
             }
