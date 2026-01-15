@@ -2,42 +2,54 @@ import java.util.*;
 
 public class nextGreaterElement {
 
-    public static int[] nextGreater(int[] arr){
-        int n  = arr.length;
+    public static int[] nextGreater(int[] arr) {
+        int n = arr.length;
         int[] res = new int[n];
         Stack<Integer> st = new Stack<>();
         // for(int i = 0; i < n;i++){
-        //     res[i] = -1;
-        //     for(int j = i+1; j < n;j++){
-        //         if(arr[j]>arr[i]){
-        //             res[i] = arr[j];
-        //             break;
-        //         }
-        //     }
+        // res[i] = -1;
+        // for(int j = i+1; j < n;j++){
+        // if(arr[j]>arr[i]){
+        // res[i] = arr[j];
+        // break;
+        // }
+        // }
         // }
         // return res;
-        res[n-1] = -1;
-        st.push(arr[n-1]);
-        for(int i = n-2; i >= 0 ; i--){
-            while (!st.isEmpty() && st.peek() <= arr[i]) {
-                st.pop();
+        // res[n-1] = -1;
+        // st.push(arr[n-1]);
+        // for(int i = n-2; i >= 0 ; i--){
+        // while (!st.isEmpty() && st.peek() <= arr[i]) {
+        // st.pop();
+        // }
+        // if(st.isEmpty()){
+        // res[i] = -1;
+        // }
+        // else{
+        // res[i] = st.peek();
+        // }
+        // st.push(arr[i]);
+        // }
+        // return res;
+
+        Arrays.fill(res, -1);
+        for (int i = 0; i < n; i++) {
+
+            while (!st.isEmpty() && arr[i] > arr[st.peek()]) {
+                res[st.pop()] = arr[i];
             }
-            if(st.isEmpty()){
-                res[i] = -1;
-            }
-            else{
-                res[i] = st.peek();
-            }
-            st.push(arr[i]);
+
+            st.push(i);
         }
+
         return res;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,5,2,1,8,6,3,4};
+        int[] arr = { 1, 5, 2, 1, 8, 6, 3, 4 };
         int[] res = nextGreater(arr);
         System.out.println(Arrays.toString(res));
 
     }
-    
+
 }
