@@ -1,1 +1,1 @@
-The number of subarrays is: 2
+Number of valid subarrays: 2
