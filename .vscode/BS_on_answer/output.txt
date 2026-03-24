@@ -1,1 +1,1 @@
-Nth Root: 3
+Minimum Eating Speed: 4
