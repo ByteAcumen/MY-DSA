@@ -1,1 +1,1 @@
-Answer: 5
+Minimum capacity required: 11
