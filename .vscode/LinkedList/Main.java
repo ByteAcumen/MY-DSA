@@ -25,7 +25,7 @@ class LinkedList{
         for(int i = 1 ;i < arr.length;i++){
             Node newNode = new Node(arr[i]);
             tail.next = newNode;
-            tail = newNode;  
+            tail = newNode;
         }
         return head;
     }
